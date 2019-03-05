@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function setBigImage(foto) {
+            document.getElementById("bigimg").src = foto.src;
+        }
+    </script>
+</head>
+<body>
+<div>
+    <p style = 'text-align: center;'>
+        <img id = 'bigimg' src = 'images/img1.jpg' height = '200' alt = 'Main' />
+    </p>
+    <table style = 'margin: 0 auto;' border = '1'>
+        <tr>
+            <td>
+                <img src = 'images/img1.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Image1' />
+            </td>
+            <td>
+                <img src = 'images/img2.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Image2' />
+            </td>
+            <td>
+                <img src = 'images/img3.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Image3' />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src = 'images/img4.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Image14' />
+            </td>
+            <td>
+                <img src = 'images/img5.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Image5' />
+            </td>
+            <td>
+                <img src = 'images/img6.jpg' width = '100' onclick = 'setBigImage(this)' alt = 'Image16' />
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
