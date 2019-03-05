@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+</head>
+
+<body>
+<div id='container' class='Container'>
+    <h1>Наша продукция</h1>
+    <div class='Items'>
+        <div class='item' id='01' onclick>
+            <img src="img/image1.jpg"><br>
+            <p class='price' id='1'>1000</p>
+            <button class='item_button'>Купить</button>
+            <button class='del_button'>Удалить</button>
+        </div>
+        <div class='item' id='02' onclick>
+            <img src='img/image2.jpg'><br>
+            <p class='price' id='2'>750</p>
+            <button class='item_button'>Купить</button>
+            <button class='del_button'>Удалить</button>
+        </div>
+        <div class='item' id='03'>
+            <img src='img/image3.jpg' onclick><br>
+            <p class='price' id='3'>289</p>
+            <button class='item_button'>Купить</button>
+            <button class='del_button'>Удалить</button>
+        </div>
+        <div class='item' id='04'>
+            <img src='img/image4.jpg' onclick><br>
+            <p class='price' id='4'>1147</p>
+            <button class='item_button'>Купить</button>
+            <button class='del_button'>Удалить</button>
+        </div>
+        <div class='item' id='05'>
+            <img src='img/image5.jpg' onclick><br>
+            <p class='price' id='5'>5000</p>
+            <button class='item_button'>Купить</button>
+            <button class='del_button'>Удалить</button>
+        </div>
+    </div>
+
+    <div class='RecycleContentFields'>
+        <h1>Корзина</h1>
+        <div class='recycleContent'>
+            <address></address>
+        </div>
+        <div class='infoblock'>
+            <p class='summ'>Общая стоимость</p>
+            <button id='clear'  style="margin-left: 20px;">Очистить корзину</button>
+
+        </div><br>
+        <div id='recycle' onclick>
+            <div id='infotext' style="margin: 10px;">В вашей корзине ничего нет :(</div>
+
+        </div>
+    </div>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
