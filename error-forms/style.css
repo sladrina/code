@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    width: 700px;
+    background-color: #c3fdf4;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.btn {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.user-form {
+    width: 100%;
+    margin: 40px 0 10px 0;
+}
+
+.form-group {
+    width: 100%;
+    margin: 10px auto;
+}
+
+label, input {
+    display: block;
+}
+
+input {
+    width: 40%;
+}
+
+.red {
+    border: 2px solid red;
+}
+.errorField {
+    color: red;
+    font-size: 16px;
+}

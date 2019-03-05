@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<h1>Forms</h1>
+
+<p class="original-text">Lorem 'ipsum dolor' sit ame't, consectetur 'adipisicing' elit. Error qui's quos tempore?
+    Assumenda 'beatae consequuntur culpa' id in mag'i neque 'non numquam' optio voluptatu'm? Ab 'culpa cum' libero
+    obcaecat'i similique. 'Dicta ducimus' inventore nulla omni's praesentium 'rerum' vitae.</p>
+
+<button type="submit" class="btn btn-all">Поменять одинарные кавычки на двойные</button>
+<p class="dq-all output"></p>
+
+<form action="" class="user-form" name="form">
+    <div class="form-group">
+        <label for="inputName">Имя</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Введите имя" name="nameField">
+    </div>
+    <div class="form-group">
+        <label for="inputPhone">Телефон</label>
+        <input type="tel" class="form-control" id="inputPhone" placeholder="+7(000)000-0000" name="telField">
+    </div>
+    <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Введите email" name="emailField">
+    </div>
+    <div class="form-group">
+        <label for="inputText">Текст</label>
+        <input type="text" class="form-control" id="inputText" placeholder="Введите текст" name="textField">
+    </div>
+    <button type="submit" class="btn-send" name="btnSend">Отправить</button>
+</form>
+
+<p class="errorField output"></p>
+
+</body>
+</html>
