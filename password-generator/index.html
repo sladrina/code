@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Password generator</title>
+        <link rel="stylesheet" type="text/css" href="style.css" >
+    </head>
+    <body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="header__title">Password generator</h1>
+        </header>
+
+        <form class="form">
+            <div class="form__row">
+                <h3 class="form__desc" title="!£$%^&+?">Include symbols?</h3>
+                <div class="form__label-bg form__shared-styles">
+                    <input class="form__checkbox form__checkbox--symbols" type="checkbox" id="symbols">
+                    <label class="form__label form__shared-styles" for="symbols"></label>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <h3 class="form__desc" title="!£$%^&+?">Include capitals?</h3>
+                <div class="form__label-bg form__shared-styles">
+                    <input class="form__checkbox form__checkbox--caps" type="checkbox" id="caps">
+                    <label class="form__label form__shared-styles" for="caps"></label>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <h3 class="form__desc" title="Number of characters">Desired length?</h3>
+                <input class="form__length form__shared-styles" type="number" value="16" min='8' max='32' required>
+            </div>
+
+            <input type="submit" class="form__submit form__shared-styles" value="Generate">
+        </form>
+
+        <div class="password__container">
+            <input class="password" type="type" readonly>
+            <button class="password__copy" title="Copy to clipboard"><img src="copy.svg" alt="copi!" width="16"></button>
+            <p class="password__clipboard">Copied!</p>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

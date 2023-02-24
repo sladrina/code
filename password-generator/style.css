@@ -1,0 +1,221 @@
+:root {
+    --clr-font: #555;
+    --clr-darkest: #333;
+    --ele-height: 2.5em;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.085);
+    font-family: "Helvetica";
+}
+
+.wrapper {
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     justify-content: center;
+     margin: 0 auto;
+     width: 13em;
+}
+
+input {
+    outline: none;
+}
+
+.header {
+    padding: 0 1em;
+}
+
+.header__title {
+    color: var(--clr-font);
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.0125em;
+    white-space: nowrap;
+}
+
+.form {
+    width: 100%;
+}
+
+.form__row {
+     align-items: center;
+     display: flex;
+     justify-content: space-between;
+ }
+
+.form__desc {
+     color: var(--clr-font);
+     font-size: 0.9rem;
+     font-weight: 300;
+     user-select: none;
+ }
+
+.form__shared-styles {
+     background: rgba(0, 0, 0, 0.75);
+     border-radius: 5em;
+     color: #666;
+     transition: all 300ms ease;
+ }
+
+.form__label-bg, .form__length {
+     align-items: center;
+     display: flex;
+     height: var(--ele-height);
+     margin: 1em 0;
+     width: 4em;
+ }
+
+.form__checkbox {
+    left: -9999em;
+    position: absolute;
+    z-index: -1;
+}
+
+.form__checkbox:checked + .form__label {
+    background: #fff;
+    transform: translatex(75%);
+}
+
+.form__checkbox:checked + .form__label::before {
+    content: url("done.svg");
+}
+
+
+.form__label {
+    background: #fff;
+    cursor: pointer;
+    transform: translatex(25%);
+    text-align: center;
+    border-radius: 100%;
+    display: block;
+    height: 2em;
+    line-height: 2em;
+    width: 2em;
+}
+
+.form__label::before {
+     align-items: center;
+     content: url("close.svg");
+     display: flex;
+     justify-content: center;
+}
+
+.form__length {
+    border: none;
+    color: #fff;
+    -moz-appearance: textfield;
+    text-align: center;
+}
+
+.form__length::-webkit-inner-spin-button,
+.form__length::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.form__length::-webkit-inner-spin-button:focus,
+.form__length::-webkit-outer-spin-button:focus {
+    outline: none;
+}
+
+.form__length::-webkit-inner-spin-button:required,
+.form__length::-webkit-outer-spin-button:required {
+     box-shadow: none;
+}
+
+.form__submit {
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    height: var(--ele-height);
+    margin-top: 1em;
+    width: 100%;
+}
+
+.form__submit:hover {
+     background: #222;
+ }
+
+.password {
+    background: none;
+    border: none;
+    margin-left: 1em;
+}
+
+.password__container {
+    border: none;
+    border-radius: 5em;
+    background: #fcfcfc;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+    color: #111;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+    opacity: 0;
+    padding: 0.75em 0;
+    position: relative;
+    text-align: center;
+    transition: all 300ms ease;
+    visibility: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.password__container--visible {
+     opacity: 1;
+     visibility: visible;
+}
+
+.password__copy {
+    all: unset;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-darkest);
+    transition: all 300ms ease;
+
+    position: absolute;
+    right: -1.5em;
+    top: 0.75em;
+}
+
+.password__copy:hover {
+     color: #111;
+}
+
+.password__clipboard {
+    color: var(--clr-darkest);
+    font-weight: 600;
+    opacity: 0;
+    transform: translatey(-3em);
+    transition: all 300ms ease;
+    visibility: hidden;
+
+    position: absolute;
+    bottom: -3.25em;
+    z-index: -1;
+}
+
+.password__clipboard--success {
+     animation: displayCopyText 2s;
+ }
+
+@keyframes displayCopyText {
+    from {
+        opacity: 1;
+        transform: translatey(0);
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        transform: translatey(-3em);
+        visibility: hidden;
+    }
+}
