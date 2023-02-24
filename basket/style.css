@@ -1,33 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+
+:root {
+    --font: "Helvetica";
+}
+
+body {
+    background-color: #f5f4f4;
+}
+
 h1 {
-    font-family: sans-serif;
     color: #000000;
     font-size: 40px;
     font-weight: 400;
     line-height: 49.542px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
-button {
-    font-family: sans-serif;
+.clear {
+    position: absolute;
+    right: 0;
     display: block;
     color: white;
-    font-size: 17px;
-    font-weight: 400;
-    text-align: justify;
+    font: 400 17px var(--font);
     text-decoration: none;
-    background-color: #5DB2C8;
+    background-color: #c5c4c4;
+    border: none;
     width: 132px;
     height: auto;
     padding: 10px;
     text-align: center;
     margin: 5px;
     text-transform: uppercase;
+    visibility: visible;
+    opacity: 1;
 }
 
-button:hover {
-    color: white;
-    background-color: #6BC8E9;
+.clear:hover {
+    background-color: #b8b7b7;
 }
 
 p {
@@ -38,64 +52,128 @@ p {
     text-align: center;
 }
 
-.Items {
-    width: auto;
-    display: flex;
-    padding: 5%;
-    height: 250px;
-    justify-content: space-between;
-    background-repeat: no-repeat;
-}
-
-.item p {
-    color: black;
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 24px;
-    text-align: center;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.Container {
+.items {
+    z-index: 0;
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: White;
-}
-
-.summ {
-    font-family: sans-serif;
-    color: #010101;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    width: 300px;
-    height: 100px
-}
-
-.Recycle {
-    margin-left: 0 auto;
-}
-
-.Recycle h1 {
-    padding-left: 200px;
-}
-
-#recycle {
-    width: auto;
-    height: auto;
-    border: 2px solid #256097;
-    margin: 5%;
     display: flex;
     flex-wrap: wrap;
 }
 
-#recycle .item_button {
+.item {
+    margin: 20px 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 8px 2px rgba(0,0,0,0.25), -1px -1px 8px 2px rgba(0,0,0,0.22);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.item_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+}
+
+.item_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: contain;
+}
+
+.item_description {
+    background-color: #f5f4f4a1;
+    z-index: 2;
+    position: relative;
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.item_title {
+    text-align: center;
+    border-radius: 0 0 40px 40px;
+    font: bold 22px sans-serif;
+    margin-top: -60px;
+    height: 28px;
+    color: #000000ad;
+}
+
+.price {
+    font: bold 16px sans-serif;
+}
+
+.item_button {
+    display: flex;
+    position: relative;
+    left: calc(50% - 26px);
+    bottom: 6px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.55s opacity, 0.55s visibility;
+}
+
+.item:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.item:hover .item_button {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #f5f4f4;
+}
+
+.summ {
+    color: #010101;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.basket__content_fields {
+    margin-top: 45px;
+}
+
+.basket {
+    margin-left: 0;
+}
+
+.basket h1 {
+    padding-left: 200px;
+    margin-top: 35px;
+}
+
+#basket {
+    width: auto;
+    height: auto;
+    min-height: 194px;
+    border: 2px solid #c5c4c4;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#info_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+    color: #5f6867;
+}
+
+#basket .item_button {
     display: none;
 }
 
@@ -103,14 +181,22 @@ p {
     display: none;
 }
 
-#recycle .del_button {
+#basket .del_button {
     display: block;
 }
 
-#recycleButton {
-    float: right;
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
-.infoblock {
-    float: right;
+.basket_content {
+    position: relative;
+}
+
+@media all and (max-width: 500px) {
+    .items {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
 }

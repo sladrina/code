@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Корзина</title>
@@ -8,55 +7,78 @@
 </head>
 
 <body>
-<div id='container' class='Container'>
-    <h1>Наша продукция</h1>
-    <div class='Items'>
+<div id='container' class='container'>
+    <h1>Catalogue</h1>
+    <div class='items'>
         <div class='item' id='01' onclick>
-            <img src="img/image1.jpg"><br>
-            <p class='price' id='1'>1000</p>
-            <button class='item_button'>Купить</button>
-            <button class='del_button'>Удалить</button>
+            <div class="item_image">
+                <img src="img/img1.png" alt="item image">
+            </div>
+            <div class="item_description">
+                <p class="item_title">Item 1</p>
+                <p class='price' id='1'>1000</p>
+            </div>
+            <img class='item_button' src="img/plus52.svg" alt="add button">
+            <img class='del_button' src="img/delete26.svg" alt="delete button">
         </div>
         <div class='item' id='02' onclick>
-            <img src='img/image2.jpg'><br>
-            <p class='price' id='2'>750</p>
-            <button class='item_button'>Купить</button>
-            <button class='del_button'>Удалить</button>
+            <div class="item_image">
+                <img src="img/img2.png" alt="item_image">
+            </div>
+            <div class="item_description">
+                <p class="item_title">Item 2</p>
+                <p class='price' id='2'>750</p>
+            </div>
+            <img class='item_button' src="img/plus52.svg" alt="add button">
+            <img class='del_button' src="img/delete26.svg" alt="delete button">
         </div>
         <div class='item' id='03'>
-            <img src='img/image3.jpg' onclick><br>
-            <p class='price' id='3'>289</p>
-            <button class='item_button'>Купить</button>
-            <button class='del_button'>Удалить</button>
+            <div class="item_image">
+                <img src="img/img3.png" alt="item image">
+            </div>
+            <div class="item_description">
+                <p class="item_title">Item 3</p>
+                <p class='price' id='3'>289</p>
+            </div>
+            <img class='item_button' src="img/plus52.svg" alt="add button">
+            <img class='del_button' src="img/delete26.svg" alt="delete button">
         </div>
         <div class='item' id='04'>
-            <img src='img/image4.jpg' onclick><br>
-            <p class='price' id='4'>1147</p>
-            <button class='item_button'>Купить</button>
-            <button class='del_button'>Удалить</button>
+            <div class="item_image">
+                <img src="img/img4.png" alt="item image">
+            </div>
+            <div class="item_description">
+                <p class="item_title">Item 4</p>
+                <p class='price' id='4'>1147</p>
+            </div>
+            <img class='item_button' src="img/plus52.svg" alt="add button">
+            <img class='del_button' src="img/delete26.svg" alt="delete button">
         </div>
         <div class='item' id='05'>
-            <img src='img/image5.jpg' onclick><br>
-            <p class='price' id='5'>5000</p>
-            <button class='item_button'>Купить</button>
-            <button class='del_button'>Удалить</button>
+            <div class="item_image">
+                <img src="img/img5.png" alt="item image">
+            </div>
+            <div class="item_description">
+                <p class="item_title">Item 5</p>
+                <p class='price' id='5'>2189</p>
+            </div>
+            <img class='item_button' src="img/plus52.svg" alt="add button">
+            <img class='del_button' src="img/delete26.svg" alt="delete button">
         </div>
     </div>
 
-    <div class='RecycleContentFields'>
-        <h1>Корзина</h1>
-        <div class='recycleContent'>
+    <div class='basket__content_fields'>
+        <h1>Basket</h1>
+        <div class='basket_content'>
+            <div class='clear_button_wrap'>
+                <button class='clear hidden'>Clear</button>
+            </div>
             <address></address>
         </div>
-        <div class='infoblock'>
-            <p class='summ'>Общая стоимость</p>
-            <button id='clear'  style="margin-left: 20px;">Очистить корзину</button>
-
-        </div><br>
-        <div id='recycle' onclick>
-            <div id='infotext' style="margin: 10px;">В вашей корзине ничего нет :(</div>
-
+        <div id='basket' onclick>
+            <div id='info_text'>Basket is empty :(</div>
         </div>
+        <p class='summ'></p>
     </div>
 </div>
 <script src="script.js" defer></script>
